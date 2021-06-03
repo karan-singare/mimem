@@ -1,0 +1,54 @@
+<div *ngIf="data_fetched && info">
+  <h3>Basic Health Information</h3>
+  <table class="table table-striped table-bordered">
+    <tbody>
+      <tr>
+        <td>Weight</td>
+        <td>{{ info.weight }} kg</td>
+      </tr>
+      <tr>
+        <td>Height</td>
+        <td>{{ info.height }} m</td>
+      </tr>
+      <tr>
+        <td>Blood Sugar Level</td>
+        <td>{{ info.bloodsugarlevel }}</td>
+      </tr>
+      <tr>
+        <td>Temperature</td>
+        <td>{{ info.temperature }} C</td>
+      </tr>
+      <tr>
+        <td>Burn Calories</td>
+        <td>{{ info.burncalories }}</td>
+      </tr>
+      <tr>
+        <td>Intake Calories</td>
+        <td>{{ info.intakecalories }}</td>
+      </tr>
+      <tr>
+        <td>Insurance Policy Number</td>
+        <td>{{ info.insurancepolicynumber }}</td>
+      </tr>
+      <tr>
+        <td>Habitual Consumption</td>
+        <td>{{ info.habitualconsumption }}</td>
+      </tr>
+      <tr>
+        <td>Family Medical History</td>
+        <td>{{ info.familymedicalhistory }}</td>
+      </tr>
+      <tr>
+        <td>Physical Symptoms</td>
+        <td>{{ info.physicalsymptoms }}</td>
+      </tr>
+      <tr>
+        <td>Cognitive Symptoms</td>
+        <td>{{ info.cognitivesymptoms }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a href="#" class="btn btn-success">Update Information</a>
+
+</div>

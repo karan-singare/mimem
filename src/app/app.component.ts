@@ -14,7 +14,5 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.serverResponse = this.doctorService.getResponse();
-    console.log(this.serverResponse);
   }
 }
