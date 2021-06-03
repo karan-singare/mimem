@@ -1,0 +1,105 @@
+<form #basicHealthForm *ngIf="data_fetched">
+
+  <div class="form-group">
+    <label for="weight">Weight</label>
+    <input type="number" class="form-control" id="weight" aria-describedby="weightHelp" placeholder="Enter Weight" name="weight" [(ngModel)]="info.weight">
+    <small id="weightHelp" class="form-text text-muted">Weight should be in Kg</small>
+  </div>
+
+  <div class="form-group">
+    <label for="height">Height</label>
+    <input type="number" class="form-control" id="height" aria-describedby="heightHelp" placeholder="Enter Height" name="height" [(ngModel)]="info.height">
+    <small id="heightHelp" class="form-text text-muted">Height should be in m</small>
+  </div>
+
+  <div class="form-group">
+    <label for="sugarLevel">Blood Sugar Level</label>
+    <input type="number" class="form-control" id="weight" aria-describedby="sugarLevelHelp" placeholder="Enter Blood Sugar Level" name="bloodsugarlevel" [(ngModel)]="info.bloodsugarlevel">
+    <small id="sugarLevelHelp" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="policyNumber">Insurance Policy Number</label>
+    <input type="number" class="form-control" id="policyNumber" aria-describedby="policyNumberHelp" placeholder="Enter Insurance Policy Number" name="insurancepolicynumber" [(ngModel)]="info.insurancepolicynumber">
+    <small id="policyNumberHelp" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="temperature">Temperature</label>
+    <input type="number" class="form-control" id="temperature" aria-describedby="temperatureHelp" placeholder="Enter Temperature" name="temperature" [(ngModel)]="info.temperature">
+    <small id="temperatureHelp" class="form-text text-muted">Temperature should be in C</small>
+  </div>
+
+  <div class="form-group">
+    <label for="burncalories">Burn Caloreis</label>
+    <input type="number" class="form-control" id="burncalories" aria-describedby="burncaloriesHelp" placeholder="Enter Burn Calories" name="burncalories" [(ngModel)]="info.burncalories">
+    <small id="burncaloriesHelp" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="intakecalories">Intake Calories</label>
+    <input type="number" class="form-control" id="intakecalories" aria-describedby="intakecaloriesHelp" placeholder="Enter Intake Calories" name="intakecalories" [(ngModel)]="info.intakecalories">
+    <small id="intakecaloriesHelp" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+      <label for="habitualconsumption">Habitual Consumption</label>
+      <select id="habitualconsumption" class="form-control" name="habitualconsumption" [(ngModel)]="info.habitualconsumption">
+        <option selected value="CIGARETTES">Cigarettes</option>
+        <option value="ALCOHOL">Alcohol</option>
+        <option value="COFFEE">Coffee</option>
+        <option value="TEA">Tea</option>
+        <option value="COLA">Cola</option>
+        <option value="DRUGS">Drugs</option>
+        <option value="OTHERS">Others</option>
+      </select>
+  </div>
+
+  <div class="form-group">
+      <label for="familymedicalhistory">Family Medical History</label>
+      <select id="familymedicalhistory" class="form-control" name="familymedicalhistory" [(ngModel)]="info.familymedicalhistory">
+        <option selected value="ASTHMA">Asthama</option>
+        <option value="BIRTH DEFECTS">Birth Defects</option>
+        <option value="CANCER">Cancer</option>
+        <option value="GENETIC CONDITIONS">Genetic Conditions</option>
+        <option value="DIABETES">Diabetes</option>
+        <option value="HEART DISEASE">Heart Disease</option>
+        <option value="MENTAL ILLNESS">Mental Illness</option>
+        <option value="OSTEOPOROSIS">Osteoporosis</option>
+        <option value="PREGNANCY LOSS">Pregnancy loss</option>
+        <option value="STILLBIRTHS">Stillbirths</option>
+        <option value="STROKE">Stroke</option>
+      </select>
+    </div>
+
+
+  <div class="form-group">
+      <label for="physicalsymptoms">Physical Symptoms</label>
+      <select id="physicalsymptoms" class="form-control" name="physicalsymptoms" [(ngModel)]="info.physicalsymptoms">
+        <option selected value="FATIGUE">Fattigue</option>
+        <option value="DECREASED STRENGTH">Decreased Strength</option>
+        <option value="DECREASED ENDURANCE">Decreased Endurance</option>
+        <option value="MUSCLE LOSS">COFFEE</option>
+        <option value="DIFFICULTY GAINING MUSCLE">Difficulty gaining muscle</option>
+        <option value="DIFFICULTY LOSING FAT">Difficulty losing fat</option>
+        <option value="DECREASED SPORTS PERFORMANCE">Decreased sports performance</option>
+        <option value="TROUBLE SLEEPING">OTHERS</option>
+        <option value="REDUCED IMMUNITY">Reduced Immunity</option>
+        <option value="HAIR LOSS">Hair Loss</option>
+      </select>
+    </div>
+
+  <div class="form-group">
+      <label for="cognitivesymptoms">Coginitive Symptoms</label>
+      <select id="cognitivesymptoms" class="form-control" name="cognitivesymptoms" [(ngModel)]="info.cognitivesymptoms">
+        <option selected value="LACK_OF_ENJOYMENT_IN_LIFE">Lack of enjoyment in life</option>
+        <option value="EXCESSIVE_IRRITABILITY">Excessive Irritability</option>
+        <option value="DECREASED_PRODUCTIVITY">Decreased productivity</option>
+        <option value="DIFFICULTY_CONCENTRATING">Difficulty concentrating</option>
+        <option value="POOR_MEMORY">Poor Memory</option>
+        <option value="LOSS_OF_FOCUS">Loss of focus</option>
+      </select>
+    </div>
+
+  <button type="button" class="btn btn-primary" (click)="onSubmit()">Update</button>
+</form>

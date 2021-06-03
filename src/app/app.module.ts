@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
+import {FormsModule} from '@angular/forms';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -16,6 +17,7 @@ import { FutureAppointmentsComponent } from './future-appointments/future-appoin
 import { DigonosticReportsComponent } from './digonostic-reports/digonostic-reports.component';
 import { DoctorVisitsComponent } from './doctor-visits/doctor-visits.component';
 import { HomeComponent } from './home/home.component';
+import { BasicHealthInformationUpdateComponent } from './basic-health-information/basic-health-information-update/basic-health-information-update.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +33,14 @@ import { HomeComponent } from './home/home.component';
     FutureAppointmentsComponent,
     DigonosticReportsComponent,
     DoctorVisitsComponent,
-    HomeComponent
+    HomeComponent,
+    BasicHealthInformationUpdateComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

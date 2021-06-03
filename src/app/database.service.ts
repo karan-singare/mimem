@@ -19,4 +19,12 @@ export class DatabaseService {
     return this.http
       .get(this.base_url + this.end_point + '/' + id);
   }
+
+  updateItemById(id: string, data: any): any {
+    return this.http
+    .put(
+      this.base_url + this.end_point + '/' + id + '/',
+      data
+    );
+  }
 }
