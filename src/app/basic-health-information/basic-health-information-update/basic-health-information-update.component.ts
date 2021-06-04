@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../../database.service';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-basic-health-information-update',
@@ -9,7 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class BasicHealthInformationUpdateComponent implements OnInit {
 
-  constructor(private databaseService: DatabaseService) { }
+  constructor(private databaseService: DatabaseService, private router: Router) { }
   private user_id = "1";
   public data_fetched = false;
   public info: any;
@@ -47,6 +48,7 @@ export class BasicHealthInformationUpdateComponent implements OnInit {
       .updateItemById(this.user_id, this.info)
       .subscribe((response: any) => {
         console.log(response);
+        this.router.navigate(['/basic-health-information']);
 
       });
   }

@@ -1,3 +1,11 @@
 .form-group select option {
   text-transform: capitalize;
 }
+
+form {
+  height: 40rem!important;
+  overflow-y: scroll;
+}
+button {
+  margin-top: 2rem;
+}
